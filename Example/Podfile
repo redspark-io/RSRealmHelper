@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RSRealmHelper_Example' do
+  pod 'RSRealmHelper', :path => '../'
+
+  target 'RSRealmHelper_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
