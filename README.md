@@ -20,9 +20,55 @@ it, simply add the following line to your Podfile:
 pod 'RSRealmHelper'
 ```
 
-## Author
+## Usage
 
-marcusvc.costa@gmail.com, marcus.costa@redspark.io
+You can usage the library directly, without initial setup.
+
+### Entities
+Create your own entities like `EmployeeRealm`
+```swift
+import RealmSwift
+
+final class EmployeeRealm: Object {
+
+    @objc dynamic var id = Int()
+    @objc dynamic var name = String()
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+
+}
+```
+
+### RealmHelper Instances 
+Create a RealmHelper on your local data manager class to manage objects on database.
+
+```swift
+let realmHelper = RealmHelper(realmInstance: .default)
+```
+
+You can create a default instance of database or a custom type.
+With custom type you can separate the user data on a specific file, isolated from others.
+
+```swift
+let instanceName = "user_123"
+let realmInstance = RealmFactory.Instance.custom(name: instanceName)
+let realmHelper = RealmHelper(realmInstance: realmInstance)
+```
+
+Or you can create your database inMemory for tests purposes.
+```swift
+let realmHelper = RealmHelper(realmInstance: .inMemory)
+```
+
+
+## Credits
+
+RSRealmHelper is owned and maintained by the [redspark](http://redspark.io/)
+
+### contributors
+Marcus Costa - marcus.costa@redspark.io
 
 ## License
 
