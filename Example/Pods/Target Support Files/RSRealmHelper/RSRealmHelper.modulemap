@@ -1,0 +1,6 @@
+framework module RSRealmHelper {
+  umbrella header "RSRealmHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

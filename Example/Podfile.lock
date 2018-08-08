@@ -1,0 +1,16 @@
+PODS:
+  - RSRealmHelper (0.1.0)
+
+DEPENDENCIES:
+  - RSRealmHelper (from `../`)
+
+EXTERNAL SOURCES:
+  RSRealmHelper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RSRealmHelper: eae70f382cbcb794c4a5dbe629b72a7d11d1f4b6
+
+PODFILE CHECKSUM: 2a68dad223cf7100c47768152bc863f4c065e144
+
+COCOAPODS: 1.5.3
