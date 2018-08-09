@@ -135,7 +135,7 @@ extension RealmFactory {
     private static func generateEncryptionKey() -> Data {
         var key = Data(count: Constants.encryptionKeyLength)
         _ = key.withUnsafeMutableBytes { bytes in
-            _ = SecRandomCopyBytes(kSecRandomDefault, key.count, bytes)
+            _ = SecRandomCopyBytes(kSecRandomDefault, Constants.encryptionKeyLength, bytes)
         }
 
         return key
