@@ -1,6 +1,7 @@
 # RSRealmHelper
 
 [![CI Status](https://img.shields.io/travis/redspark-io/RSRealmHelper.svg?style=flat)](https://travis-ci.org/redspark-io/RSRealmHelper)
+![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0-orange.svg)
 [![Version](https://img.shields.io/cocoapods/v/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
 [![License](https://img.shields.io/cocoapods/l/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
 [![Platform](https://img.shields.io/cocoapods/p/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
