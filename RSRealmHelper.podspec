@@ -14,6 +14,7 @@ Pod::Spec.new do |spec|
     spec.source           = { :git => 'https://github.com/redspark-io/RSRealmHelper.git', :tag => spec.version.to_s }
 
     spec.ios.deployment_target = '9.0'
+    spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
     spec.module_name = 'RSRealmHelper'
 
     spec.source_files = 'RSRealmHelper/Classes/**/*'
