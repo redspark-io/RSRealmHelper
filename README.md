@@ -1,18 +1,18 @@
 # RSRealmHelper
 
-[![CI Status](https://img.shields.io/travis/marcusvc.costa@gmail.com/RSRealmHelper.svg?style=flat)](https://travis-ci.org/marcusvc.costa@gmail.com/RSRealmHelper)
+[![CI Status](https://img.shields.io/travis/marcusvc.costa@gmail.com/RSRealmHelper.svg?style=flat)](https://travis-ci.org/redspark-io/RSRealmHelper)
 [![Version](https://img.shields.io/cocoapods/v/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
 [![License](https://img.shields.io/cocoapods/l/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
 [![Platform](https://img.shields.io/cocoapods/p/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
 
 ## Description
 
-The RSRealmHelper library is a class helper to work with [Realm](https://realm.io/docs/swift/latest/) database removing all boilerplate on setup of database.
-This library configure all Realm database to works with crypto, saving a crypto key on keychain access using a [KeyChainAccess](https://github.com/kishikawakatsumi/KeychainAccess) library), allows to use multiples realm files to isolate data by user, for example and create a clone connection to perform a thread safe execution.
+The RSRealmHelper library is a class helper to work with [Realm](https://realm.io/docs/swift/latest/) database removing all boilerplate when setting your database.
+This library configures all Realm database to work with crypto, saving a crypto key on keychain access using a [KeyChainAccess](https://github.com/kishikawakatsumi/KeychainAccess) library, allows to use multiple realm files to isolate data by user and create a clone connection to perform a thread safe execution.
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo and run `pod install` from the Example directory first.
 
 ## Requirements
 
@@ -30,7 +30,9 @@ pod 'RSRealmHelper'
 You can use the library directly, without initial setup.
 
 ### Entities
-Create your own entities conform a instructions on [Realm Documentation](https://realm.io/docs/swift/latest/#getting-started) like `EmployeeRealm`
+
+Create your own entities following the instructions on [Realm Documentation](https://realm.io/docs/swift/latest/#getting-started) like `EmployeeRealm`
+
 ```swift
 import RealmSwift
 
@@ -47,9 +49,9 @@ final class EmployeeRealm: Object {
 ```
 
 ### RealmHelper Instances
-The RealmHelper Instances allow you to create a instance of realm to a specific purposes, you can create a default, custom or inMemory instance, but only default and custom instances uses a crypto.
+The RealmHelper Instances allows you to create an instance of realm to specific purposes, you can create a default, custom or inMemory instance, but only default and custom instances uses crypto.
 
-Create a RealmHelper on your local data manager class to manage objects on database.
+Create a RealmHelper on your local data manager class to manage objects on database.    
 You can create a default instance of database.
 ```swift
 let realmHelper = RealmHelper()
@@ -72,7 +74,7 @@ let realmHelper = RealmHelper(realmInstance: .inMemory)
 
 ### Save / Update objetcs
 
-You can save or update your entity using a realm helper simply calling a save or update function with entity as a parameter, but to update your entity needs to implement a primary key and not attached to realm yet
+You can save or update your entity using a RealmHelper by simply calling `save` or `update` function with the entity as a parameter, but to update, your entity needs to implement a primary key and not be attached to realm yet
 
 ```swift
 let employee = EmployeeRealm()
@@ -80,15 +82,15 @@ try! realmHelper.save(employee)
 try! realmHelper.update(employee)
 ```
 
-If you need to increment your identifier, normally the primary key property, you need to call a function with the name of  the parameter you need to increase.
+If you need to increment your identifier, usually the primary key property, you need to call a function with the name of  the parameter you need to increase.
 
 ```swift
 let employee = EmployeeRealm()
 try! realmHelper.save(employee, incrementProperty: "id")
 ```
 
-To update a attached realm object, you need to open a write block and update the properties. 
-Write block send a instance of realm if you need to create something in particular.
+To update an attached realm object, you need to open a write block and update the properties.     
+Write block sends an instance of realm in case you need to create something in particular.
 
 ```swift
 let employee = EmployeeRealm()
@@ -99,7 +101,7 @@ try! realmHelper.writeInRealm { realm in
 ```
 ### Fetch / Count objects
 
-Realm Helper provides some functions to performs a more redable code, and works with generics and type inference.
+RealmHelper provides some functions to help you write a more redable code, because it works with generics and type inference.
 
 ```swift
 // Count employees in database  
@@ -126,7 +128,7 @@ let employee: EmployeeRealm? = realmHelper.findFirst(withPredicate: predicate)
 
 ### Delete objects
 
-Realm Helper provides to ways to delete objects, a simple delete and a cascade delete that deletes elements and your childs.
+RealmHelper provides two ways to delete objects, a simple delete and a cascade delete that deletes elements and their children.
 
 To simple delete you can call the delete function.
 ```swift
@@ -142,7 +144,8 @@ realmHelper.delete(elements: employeeList)
 try! realmHelper.deleteAll(type: EmployeeRealm.self)
 ```
 
-If you need to delete entities using a cascade method, you need to implement the `CascadeDeletable` protocol in your entity to mapper the properties needs to be deleted when  the entity be deleted, like this:
+If you need to delete entities using a cascade method, you need to implement the `CascadeDeletable` protocol in your entity to map the properties that need to be deleted together the entity:
+
 ```swift
 final class CompanyRealm: Object {
 
@@ -167,11 +170,12 @@ extension CompanyRealm: CascadeDeletable {
 }
 ```
 
-And when you delete your object you need to call the function `cascadingDelete` instead the `delete` function.
+Then you need to call the function `cascadingDelete` instead the `delete` function.
 ```swift
 try! realmHelper.cascadingDelete(company)
 ```
-And finally, if you need to delete all database you can call 
+
+If you need to delete all database you can call 
 
 ```swift
 try! realmHelper.clearDatabase()
@@ -179,7 +183,7 @@ try! realmHelper.clearDatabase()
 
 ### Thread safe
 
-To call realm helper's functions in diferent threads using the same helper you need to clone the helper instance before call your functions.
+To call RealmHelper's functions in diferent threads using the same helper you need to clone the helper instance before your function calls.
 
 ```swift
 DispatchQueue.main.async {
@@ -191,7 +195,7 @@ DispatchQueue.main.async {
 
 ### Debug
 
-Sets the `RealmFactory.enableDebug` to enable / disable the debug messages
+Set the property `RealmFactory.enableDebug` to enable / disable the debug messages
 
 ```swift
 RealmFactory.enableDebug = true
@@ -199,9 +203,9 @@ RealmFactory.enableDebug = true
 
 ### Migration
 
-To performs a Realm migration in you database we need to add a key in a project info.plist with name `DATABASE_SCHEMA_VERSION` and a numeric valur of your database schema version.
+To perform a Realm migration in your database you need to add a key in a project info.plist with name `DATABASE_SCHEMA_VERSION` and the numeric value of your database schema version.
 
-Create a class that implements a   `RealmMigrator` protocol:
+Create a class that implements the `RealmMigrator` protocol:
 ```swift
 class MyRealmMigrator: RealmMigrator {
 
@@ -213,7 +217,7 @@ class MyRealmMigrator: RealmMigrator {
 
 ```
 
-And set you newer class, that implements a `RealmMigrator` protocol on `RealmFactory` class.
+And set you new class, that implements a `RealmMigrator` protocol, on `RealmFactory` class.
 
 ```swift
 RealmFactory.realmMigrator = MyRealmMigrator()
