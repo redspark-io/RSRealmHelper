@@ -1,11 +1,13 @@
 use_frameworks!
 
 target 'RSRealmHelper_Example' do
-  pod 'RSRealmHelper', :path => '../'
+    pod 'RealmSwift', '~> 3.7.5'
+    pod 'KeychainAccess', '~> 3.1.1'
+    pod 'RSRealmHelper', :path => '../'
 
-  target 'RSRealmHelper_Tests' do
-    inherit! :search_paths
+    target 'RSRealmHelper_Tests' do
+        inherit! :search_paths
 
     
-  end
+    end
 end

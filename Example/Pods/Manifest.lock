@@ -10,6 +10,8 @@ PODS:
     - RealmSwift
 
 DEPENDENCIES:
+  - KeychainAccess (~> 3.1.1)
+  - RealmSwift (~> 3.7.5)
   - RSRealmHelper (from `../`)
 
 SPEC REPOS:
@@ -26,8 +28,8 @@ SPEC CHECKSUMS:
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
   Realm: c286caf4dbf346ce24aad49ca76c7ce622d4a082
   RealmSwift: 2a9281e37d6de55f66f76254d49d28aeb1b729e4
-  RSRealmHelper: 362e5f4e7f009a944ff8491dfcea53c3b990ab27
+  RSRealmHelper: ab4a4934b2ebf31966f843fb88aaa5dc50d263e3
 
-PODFILE CHECKSUM: 2a68dad223cf7100c47768152bc863f4c065e144
+PODFILE CHECKSUM: e51c9f779224f55c93fb4b2e80c3e07454a747ef
 
 COCOAPODS: 1.5.3
