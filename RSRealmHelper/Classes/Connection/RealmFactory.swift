@@ -19,7 +19,7 @@ final public class RealmFactory {
         case `default`
         case custom(name: String)
 
-        var name: String {
+        public var name: String {
             switch self {
             case .inMemory:
                 return String()
@@ -56,7 +56,11 @@ final public class RealmFactory {
                 let schemaKey = Constants.databaseSchemaVersion
                 guard let schema = Bundle.main.object(forInfoDictionaryKey: schemaKey) as? String,
                     let schemaVersion = UInt64(schema) else {
-                        debugPrint("RealmHelper -> Fail to load schema version number from info.plist file, implement \(schemaKey) key on info.plist")
+                        #if DEBUG
+                        if enableDebug {
+                            debugPrint("Realm Helper -> Fail to load schema version number from info.plist file, implement \(schemaKey) key on info.plist")
+                        }
+                        #endif
                         return 1
                 }
 
@@ -92,9 +96,9 @@ final public class RealmFactory {
 
         #if DEBUG
         if enableDebug {
-            debugPrint("Realm Helper -> Open realm file: \(String(describing: fileUrl))")
-            debugPrint("Realm Helper -> EncryptionKey: \(encryptKey)")
-            debugPrint("Realm Helper -> Version: \(schemaVersion)")
+            debugPrint("Realm Helper -> Open realm file: \(fileUrl?.absoluteString ?? String())")
+            debugPrint("Realm Helper -> EncryptionKey: \(encryptKey.base64EncodedString())")
+            debugPrint("Realm Helper -> Scheme Version: \(schemaVersion)")
         }
         #endif
 

@@ -12,7 +12,7 @@ public class RealmHelper {
 
     private let instance: RealmFactory.Instance
 
-    public init(realmInstance: RealmFactory.Instance) {
+    public init(realmInstance: RealmFactory.Instance = .default) {
         instance = realmInstance
     }
 
@@ -127,11 +127,15 @@ extension RealmHelper {
                     throw RealmError.canNotWriteOnDisk
                 }
             }
-            debugPrint("Inserted elements: \(elements)")
+            if RealmFactory.enableDebug {
+                debugPrint("Inserted elements: \(elements)")
+            }
         } else {
             try writeInRealm { realm in
                 realm.add(elements)
-                debugPrint("Inserted elements: \(elements)")
+                if RealmFactory.enableDebug {
+                    debugPrint("Inserted elements: \(elements)")
+                }
             }
         }
     }
@@ -152,7 +156,9 @@ extension RealmHelper {
         do {
             try writeInRealm { realm in
                 realm.add(elements, update: true)
-                debugPrint("Updated elements: \(elements)")
+                if RealmFactory.enableDebug {
+                    debugPrint("Updated elements: \(elements)")
+                }
             }
         } catch {
             throw RealmError.canNotWriteOnDisk
@@ -181,7 +187,9 @@ extension RealmHelper {
             let deletedElements = elements.map{ "\($0)" }
             try writeInRealm { realm in
                 realm.delete(elements)
-                debugPrint("Deleted elements: \(deletedElements)")
+                if RealmFactory.enableDebug {
+                    debugPrint("Deleted elements: \(deletedElements)")
+                }
             }
         } catch {
             throw RealmError.canNotDeleteFiles
@@ -197,7 +205,9 @@ extension RealmHelper {
             try writeInRealm { realm in
                 let objects = realm.objects(type)
                 realm.delete(objects)
-                debugPrint("Deleted all elements of type \(type)")
+                if RealmFactory.enableDebug {
+                    debugPrint("Deleted all elements of type \(type)")
+                }
             }
         } catch {
             throw RealmError.canNotDeleteFiles
@@ -242,7 +252,9 @@ extension RealmHelper {
         }
         let deletedElement = "\(element)"
         realm.delete(element)
-        debugPrint("Deleted element: \(deletedElement)")
+        if RealmFactory.enableDebug {
+            debugPrint("Deleted element: \(deletedElement)")
+        }
     }
 
     /// Deletes all objects of a certain type, and their children types (cascade delete).
@@ -267,7 +279,9 @@ extension RealmHelper {
         }
         let objects = realm.objects(type)
         realm.delete(objects)
-        debugPrint("Deleted all elements of type \(type)")
+        if RealmFactory.enableDebug {
+            debugPrint("Deleted all elements of type \(type)")
+        }
     }
 
     /// Clear all database
@@ -277,7 +291,9 @@ extension RealmHelper {
         do {
             try writeInRealm { realm in
                 realm.deleteAll()
-                debugPrint("Database cleared")
+                if RealmFactory.enableDebug {
+                    debugPrint("Database cleared")
+                }
             }
         } catch {
             throw RealmError.canNotDeleteFiles

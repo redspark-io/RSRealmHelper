@@ -10,7 +10,7 @@ import RealmSwift
 
 extension Results {
 
-    func toArray() -> [ElementType] {
+    public func toArray() -> [ElementType] {
         return Array(self)
     }
 
