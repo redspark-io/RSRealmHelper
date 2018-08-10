@@ -1,8 +1,6 @@
 use_frameworks!
 
 target 'RSRealmHelper_Example' do
-    pod 'RealmSwift', '~> 3.7.6'
-    pod 'KeychainAccess', '~> 3.1.1'
     pod 'RSRealmHelper', :path => '../'
 
     target 'RSRealmHelper_Tests' do

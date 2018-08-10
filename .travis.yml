@@ -3,7 +3,7 @@ language: objective-c
 branches:
   only:
     - master
-cache: cocoapods
+# cache: cocoapods
 podfile: Example/Podfile 
 before_install:
   - rvm install ruby-2.2.2
