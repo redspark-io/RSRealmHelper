@@ -1,8 +1,8 @@
-# RSRealmHelper
+![redspark - RSRealmHelper](http://blog.redspark.io/wp-content/uploads/2015/12/logo-grande-min.png)
 
 [![CI Status](https://img.shields.io/travis/redspark-io/RSRealmHelper.svg?style=flat)](https://travis-ci.org/redspark-io/RSRealmHelper)
 ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0-orange.svg)
-[![Version](https://img.shields.io/cocoapods/v/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/RSRealmHelper.svg?style=flat)](https://img.shields.io/cocoapods/v/RSRealmHelper.svg)
 [![License](https://img.shields.io/cocoapods/l/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
 [![Platform](https://img.shields.io/cocoapods/p/RSRealmHelper.svg?style=flat)](https://cocoapods.org/pods/RSRealmHelper)
 
