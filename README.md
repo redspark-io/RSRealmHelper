@@ -1,4 +1,6 @@
-![redspark - RSRealmHelper](http://blog.redspark.io/wp-content/uploads/2015/12/logo-grande-min.png)
+<p align="center">
+    <img src="http://blog.redspark.io/wp-content/uploads/2015/12/logo-grande-min.png" alt="RSRealmHelper"/>
+</p>
 
 [![CI Status](https://img.shields.io/travis/redspark-io/RSRealmHelper.svg?style=flat)](https://travis-ci.org/redspark-io/RSRealmHelper)
 ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0-orange.svg)
