@@ -15,7 +15,7 @@
 		A118FA6B80FA715AF9795419 /* Pods_RSRealmHelper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A5368C1554191071C03C62 /* Pods_RSRealmHelper_Example.framework */; };
 		AC4619D8211B8C9100084662 /* CompanyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4619D5211B8C9000084662 /* CompanyRealm.swift */; };
 		AC4619D9211B8C9100084662 /* EmployeeRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4619D6211B8C9100084662 /* EmployeeRealm.swift */; };
-		AC4619DA211B8C9100084662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4619D7211B8C9100084662 /* ViewController.swift */; };
+		AC95C2A8211DD3BC00FC3D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95C2A7211DD3BC00FC3D38 /* ViewController.swift */; };
 		F772882767B73B1B8A086D79 /* Pods_RSRealmHelper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10129DDAB936E2D0EBF823AD /* Pods_RSRealmHelper_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		975EB1E77CFD0C724EC37739 /* RSRealmHelper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RSRealmHelper.podspec; path = ../RSRealmHelper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AC4619D5211B8C9000084662 /* CompanyRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyRealm.swift; sourceTree = "<group>"; };
 		AC4619D6211B8C9100084662 /* EmployeeRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRealm.swift; sourceTree = "<group>"; };
-		AC4619D7211B8C9100084662 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../__RSRealmHelper/Example/RSRealmHelper/ViewController.swift; sourceTree = "<group>"; };
+		AC95C2A7211DD3BC00FC3D38 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAC877E5BAA3B4657D993D12 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F9F49CFFF1256C226852EBD3 /* Pods-RSRealmHelper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSRealmHelper_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSRealmHelper_Example/Pods-RSRealmHelper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,8 +108,8 @@
 		607FACD21AFB9204008FA782 /* Example for RSRealmHelper */ = {
 			isa = PBXGroup;
 			children = (
+				AC95C2A7211DD3BC00FC3D38 /* ViewController.swift */,
 				AC4619DB211B8C9E00084662 /* Entities */,
-				AC4619D7211B8C9100084662 /* ViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -342,9 +342,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC4619DA211B8C9100084662 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				AC4619D8211B8C9100084662 /* CompanyRealm.swift in Sources */,
+				AC95C2A8211DD3BC00FC3D38 /* ViewController.swift in Sources */,
 				AC4619D9211B8C9100084662 /* EmployeeRealm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
