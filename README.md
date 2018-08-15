@@ -11,11 +11,11 @@
 ## Description
 
 The RSRealmHelper library is a class helper to work with [Realm](https://realm.io/docs/swift/latest/) database removing all boilerplate when setting your database.
-This library configures all Realm database to work with crypto, saving a crypto key on keychain access using a [KeyChainAccess](https://github.com/kishikawakatsumi/KeychainAccess) library, allows to use multiple realm files to isolate data by user and create a clone connection to perform a thread safe execution.
+This library configures all Realm database to work with crypto, saving a crypto key on keychain access using a [KeyChainAccess](https://github.com/kishikawakatsumi/KeychainAccess) library. It allows you to use multiple realm files to isolate data by user and create a clone connection to perform a thread safe execution.
 
 ## Example
 
-To run the example project, clone the repo and run `pod install` from the Example directory first.
+To run the example project, first clone the repo and run `pod install` from the Example directory.
 
 ## Requirements
 
@@ -52,7 +52,7 @@ final class EmployeeRealm: Object {
 ```
 
 ### RealmHelper Instances
-The RealmHelper Instances allows you to create an instance of realm to specific purposes, you can create a default, custom or inMemory instance, but only default and custom instances uses crypto.
+The RealmHelper Instances allows you to create an instance of realm to specific purposes. You can create a default, custom or inMemory instance, but only default and custom instances use crypto.
 
 Create a RealmHelper on your local data manager class to manage objects on database.    
 You can create a default instance of database.
@@ -75,9 +75,9 @@ Or you can create your database inMemory for tests purposes.
 let realmHelper = RealmHelper(realmInstance: .inMemory)
 ```
 
-### Save / Update objetcs
+### Save / Update objects
 
-You can save or update your entity using a RealmHelper by simply calling `save` or `update` function with the entity as a parameter, but to update, your entity needs to implement a primary key and not be attached to realm yet
+You can save or update your entity using a RealmHelper by simply calling `save` or `update` functions with the entity as a parameter. But to update your entity, it needs to implement a primary key and not be attached to realm yet
 
 ```swift
 let employee = EmployeeRealm()
@@ -85,7 +85,7 @@ try! realmHelper.save(employee)
 try! realmHelper.update(employee)
 ```
 
-If you need to increment your identifier, usually the primary key property, you need to call a function with the name of  the parameter you need to increase.
+If you need to increment your identifier, which usually is the primary key property, you need to call a function with the name of  the parameter you need to increase.
 
 ```swift
 let employee = EmployeeRealm()
@@ -147,7 +147,7 @@ realmHelper.delete(elements: employeeList)
 try! realmHelper.deleteAll(type: EmployeeRealm.self)
 ```
 
-If you need to delete entities using a cascade method, you need to implement the `CascadeDeletable` protocol in your entity to map the properties that need to be deleted together the entity:
+If you need to delete entities using a cascade method, you need to implement the `CascadeDeletable` protocol in your entity to map the properties that need to be deleted together:
 
 ```swift
 final class CompanyRealm: Object {
@@ -220,7 +220,7 @@ class MyRealmMigrator: RealmMigrator {
 
 ```
 
-And set you new class, that implements a `RealmMigrator` protocol, on `RealmFactory` class.
+You must set your new class, which implements a `RealmMigrator` protocol, on `RealmFactory` class.
 
 ```swift
 RealmFactory.realmMigrator = MyRealmMigrator()
