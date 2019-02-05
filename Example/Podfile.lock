@@ -1,11 +1,11 @@
 PODS:
-  - KeychainAccess (3.1.1)
-  - Realm (3.7.6):
-    - Realm/Headers (= 3.7.6)
-  - Realm/Headers (3.7.6)
-  - RealmSwift (3.7.6):
-    - Realm (= 3.7.6)
-  - RSRealmHelper (1.0.0):
+  - KeychainAccess (3.1.2)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+  - RSRealmHelper (1.0.1):
     - KeychainAccess
     - RealmSwift
 
@@ -23,10 +23,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
-  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
-  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
-  RSRealmHelper: ab4a4934b2ebf31966f843fb88aaa5dc50d263e3
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  RSRealmHelper: 1f187c8f0054a3adb15816e33fc1518699d9c882
 
 PODFILE CHECKSUM: 592e887ac6c49aa1b216bd2a8c16943a883a4544
 

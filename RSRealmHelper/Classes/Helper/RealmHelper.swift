@@ -27,6 +27,11 @@ public class RealmHelper {
         return RealmHelper(realmInstance: instance)
     }
 
+    /// Update realm and managed objects to point to the most recent data
+    public func refreshRealm() {
+        _ = connection?.refresh()
+    }
+
 }
 
 // MARK: - Read functions

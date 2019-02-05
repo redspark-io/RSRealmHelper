@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name             = 'RSRealmHelper'
-    spec.version          = '1.0.0'
+    spec.version          = '1.0.1'
     spec.summary          = 'A helper class to use with Realm database'
 
     spec.description      = <<-DESC
@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
     spec.source           = { :git => 'https://github.com/redspark-io/RSRealmHelper.git', :tag => spec.version.to_s }
 
     spec.ios.deployment_target = '9.0'
-    spec.swift_version = '4.0'
+    spec.swift_version = '4.2'
     spec.module_name = 'RSRealmHelper'
 
     spec.source_files = 'RSRealmHelper/Classes/**/*'
