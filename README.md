@@ -230,8 +230,9 @@ RealmFactory.realmMigrator = MyRealmMigrator()
 
 RSRealmHelper is owned and maintained by the [redspark](http://redspark.io/)
 
-### contributors
+### Contributors
 Marcus Costa - marcus.costa@redspark.io
+Andre M. Della Torre - andre.dellatorre@redspark.io
 
 ## License
 

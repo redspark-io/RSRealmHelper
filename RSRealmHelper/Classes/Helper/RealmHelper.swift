@@ -160,7 +160,7 @@ extension RealmHelper {
     public func update<T: Object>(elements: [T]) throws {
         do {
             try writeInRealm { realm in
-                realm.add(elements, update: true)
+                realm.add(elements, update: .all)
                 if RealmFactory.enableDebug {
                     debugPrint("Updated elements: \(elements)")
                 }

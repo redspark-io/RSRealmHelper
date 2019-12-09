@@ -1,11 +1,11 @@
 PODS:
-  - KeychainAccess (3.1.2)
-  - Realm (3.13.1):
-    - Realm/Headers (= 3.13.1)
-  - Realm/Headers (3.13.1)
-  - RealmSwift (3.13.1):
-    - Realm (= 3.13.1)
-  - RSRealmHelper (1.0.1):
+  - KeychainAccess (4.1.0)
+  - Realm (4.1.1):
+    - Realm/Headers (= 4.1.1)
+  - Realm/Headers (4.1.1)
+  - RealmSwift (4.1.1):
+    - Realm (= 4.1.1)
+  - RSRealmHelper (1.1.0):
     - KeychainAccess
     - RealmSwift
 
@@ -13,7 +13,7 @@ DEPENDENCIES:
   - RSRealmHelper (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - KeychainAccess
     - Realm
     - RealmSwift
@@ -23,11 +23,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
-  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
-  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
-  RSRealmHelper: 1f187c8f0054a3adb15816e33fc1518699d9c882
+  KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
+  Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
+  RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
+  RSRealmHelper: bb5109b63e38ed77d59b0c6d999d6249317af874
 
 PODFILE CHECKSUM: 592e887ac6c49aa1b216bd2a8c16943a883a4544
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

@@ -284,7 +284,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RSRealmHelper_Example/Pods-RSRealmHelper_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RSRealmHelper_Example/Pods-RSRealmHelper_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/RSRealmHelper/RSRealmHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -299,7 +299,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSRealmHelper_Example/Pods-RSRealmHelper_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSRealmHelper_Example/Pods-RSRealmHelper_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		53F1C58C0E2512868638DCC9 /* [CP] Check Pods Manifest.lock */ = {
