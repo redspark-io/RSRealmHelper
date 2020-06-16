@@ -11,4 +11,4 @@ before_install:
   - brew install swiftlint || true
 script:
 - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/RSRealmHelper.xcworkspace -scheme RSRealmHelper-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=13.4.1,name=iPhone 11 Pro Max' ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+- pod lib lint --verbose
