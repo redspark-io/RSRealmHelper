@@ -5,10 +5,10 @@ branches:
     - master
 podfile: Example/Podfile 
 before_install:
-  - rvm install ruby-2.2.2
+  - brew update
+  - brew install ruby
   - gem install cocoapods
   - gem install xcpretty -N
-  - brew update
   - brew install swiftlint || true
 script:
 - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/RSRealmHelper.xcworkspace -scheme RSRealmHelper-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=9.3,name=iPhone 6' ONLY_ACTIVE_ARCH=NO | xcpretty
