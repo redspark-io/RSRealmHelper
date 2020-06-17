@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name             = 'RSRealmHelper'
-    spec.version          = '1.1.2'
+    spec.version          = '1.1.3'
     spec.summary          = 'A helper class to use with Realm database'
 
     spec.description      = <<-DESC
