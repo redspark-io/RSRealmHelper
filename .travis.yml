@@ -10,5 +10,5 @@ before_install:
   - gem install xcpretty -N
   - brew install swiftlint || true
 script:
-- travis_wait set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/RSRealmHelper.xcworkspace -scheme RSRealmHelper-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=13.4.1,name=iPhone 11 Pro Max' ONLY_ACTIVE_ARCH=NO | xcpretty
-- travis_wait pod lib lint --verbose
+- travis_wait 30 set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/RSRealmHelper.xcworkspace -scheme RSRealmHelper-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=13.4.1,name=iPhone 11 Pro Max' ONLY_ACTIVE_ARCH=NO | xcpretty
+- travis_wait 30 pod lib lint --verbose
